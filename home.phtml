@@ -1,0 +1,28 @@
+<header>
+	<h2>HELLO</h2>
+	<h1>Catherine Phillips, <strong>Creative Copywriter</strong>, with 8 years on international accounts at calibre agencies.</h1>
+	<div class="flexbox-social-header">
+		<a href="mailto:laconceptrice@gmail.com" id="click-on-email"><span>SAY HELLO </span><i class="fa fa-envelope" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/in/catherine-phillips-45a17311" id="click-on-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		<a href="https://www.facebook.com/catherine.etedal.phillips" id="click-on-fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	</div>
+</header>
+
+<?php foreach($summaries as $summary): ?>
+	<a href="index.php?page=<?= $summary['DetailPageName'] ?>">
+		<article class="<?= $summary['MediaCode'] ?>"> 
+			<h3><?= $summary['Client'] ?> <span><?= $summary['MediaType'] ?></span></h3>
+			<p><?= $summary['Description'] ?></p>
+			<img src="images/closeups/<?= $summary['Picture'] ?>" alt="<?= $summary['Client'] ?> <?= $summary['MediaType'] ?> Preview">
+		</article>
+	</a>
+<?php endforeach ?>
+
+<footer>
+	<h2>KEEP IN TOUCH</h2>
+	<div class="flexbox-social-footer">
+		<a href="mailto:laconceptrice@gmail.com"><span>Email Me </span><i class="fa fa-envelope" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/in/catherine-phillips-45a17311"><span>Find Out More </span><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		<a href="https://www.facebook.com/catherine.etedal.phillips"><span>Let's Be Friends </span><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	</div>
+</footer>
